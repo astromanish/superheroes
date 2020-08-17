@@ -30,6 +30,7 @@ for( let i=1;i<700;i++)
         div.className = "col-sm-4 offset-sm-4";
         const img = document.createElement("img");
         img.setAttribute("src",`${res.data.image.url}`);
+        img.setAttribute("alt",`superhero`);
         div.appendChild(img);
         cntr.appendChild(div);
         
