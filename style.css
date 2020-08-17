@@ -7,11 +7,19 @@
 img{
     max-width: 100%;
     display: block;
+    align-self: center;
 }
 
 .main-heading{
     font-family: 'Oswald', sans-serif;
     text-align: center;
+    margin-bottom:0 ;
+}
+
+.sub-heading{
+    text-align: center;
+    margin-top: 0;
+    color: gray;
 }
 
 .cntr{

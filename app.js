@@ -7,7 +7,7 @@ const cntr = document.querySelector("#cntr");
 // console.log(spr[4]);
 
 
-for( let i=1;i<100;i++)
+for( let i=1;i<2;i++)
 {
     axios({
         method : "get",
@@ -29,7 +29,7 @@ for( let i=1;i<100;i++)
         //console.log(res.data);
 
         const div = document.createElement("div");
-        div.className = " mb-3";
+        div.className = "col-lg-6 offset-lg-3 mb-3";
         const img = document.createElement("img");
         img.setAttribute("src",`${res.data.image.url}`);
         img.setAttribute("alt",`failed to load`);
@@ -46,6 +46,11 @@ for( let i=1;i<100;i++)
         // Superheroes properties //
 
         //Combat
+
+        if(res.data.powerstats.combat === null)
+        {
+            
+        }
 
         const div3 = document.createElement("div");
         div3.className = "progress";
@@ -226,4 +231,4 @@ for( let i=1;i<100;i++)
 // });
 
 
-// console.log(id);
+console.log(null<10);
