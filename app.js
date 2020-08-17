@@ -21,13 +21,15 @@ for( let i=1;i<100;i++)
     .then(res => showRes(res))
     .catch(err => console.log(err))
 
+ 
+
     const showRes = (res) => {
 
         // spr.push(res.data);
-        console.log(res.data);
+        //console.log(res.data);
 
         const div = document.createElement("div");
-        div.className = "col-lg-6 offset-lg-3 mb-3";
+        div.className = " mb-3";
         const img = document.createElement("img");
         img.setAttribute("src",`${res.data.image.url}`);
         img.setAttribute("alt",`failed to load`);
@@ -106,7 +108,7 @@ for( let i=1;i<100;i++)
         div7.className = "progress";
         div7.setAttribute("style","height: 20px;")
         const div8 = document.createElement("div");
-        if(res.data.powerstats.speedr<33)
+        if(res.data.powerstats.speed<33)
         {
             div8.className = "progress-bar bg-danger";
         }
@@ -217,7 +219,7 @@ for( let i=1;i<100;i++)
     }
 }
 
-console.log(cntr);
+//console.log(cntr);
     
 // const id = spr.map((sam) => {
 //     return sam.id;
