@@ -7,7 +7,7 @@ const cntr = document.querySelector("#cntr");
 // console.log(spr[4]);
 
 
-for( let i=1;i<700;i++)
+for( let i=1;i<100;i++)
 {
     axios({
         method : "get",
