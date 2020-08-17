@@ -8,3 +8,23 @@ img{
     max-width: 100%;
     display: block;
 }
+
+.main-heading{
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+}
+
+.cntr{
+    max-width: 800px;
+    margin: 0 auto;
+    width : 95%;
+}
+
+.properties{
+    margin: 0;
+    /* font-family: 'Pangolin', cursive; */
+}
+
+.progress-bar{
+    margin: 0;
+}
