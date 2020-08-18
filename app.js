@@ -43,8 +43,11 @@ for( let i=1;i<700;i++)
 
         //Combat
 
+
+        // if-else condition to check value of different powers of characters are null or some value
         if(res.data.powerstats.combat == "null")
         {
+            // if data not available
             const pwr1 = document.createElement("h6");
             pwr1.className = "properties";
             pwr1.appendChild(document.createTextNode("Combat"));
@@ -60,6 +63,8 @@ for( let i=1;i<700;i++)
             div3.className = "progress";
             div3.setAttribute("style","height: 20px;")
             const div4 = document.createElement("div");
+
+            // if-else condition to change color of power bars in UI based on their value
             if(res.data.powerstats.combat<33)
             {
                 div4.className = "progress-bar bg-danger";
