@@ -1,47 +1,43 @@
 const cntr = document.querySelector("#cntr");
 
-// console.log(cntr)
-
-// let spr = [];
-
-// console.log(spr[4]);
-
+// Loop through the character id of each superheros
 
 for( let i=1;i<700;i++)
 {
+    // Requesting complete data for a character one at each iteration
     axios({
         method : "get",
         url : `https://superheroapi.com/api.php/1571164256420548/${i}/`,
-        // headers: {
-        //     "Content-Type":"application/x-www-form-urlencoded"
-        // }
-
-
     })
-    .then(res => showRes(res))
+    .then(res => showRes(res)) // Calling showRes function to show received data from API on to the UI
     .catch(err => console.log(err))
 
  
 
     const showRes = (res) => {
 
-        // spr.push(res.data);
-        //console.log(res.data);
-
+        // Creating column for each character
         const div = document.createElement("div");
         div.className = "col-lg-6 offset-lg-3 mb-3";
+
+        // Image container for each character
         const img = document.createElement("img");
         img.setAttribute("src",`${res.data.image.url}`);
         img.setAttribute("alt",`failed to load`);
         div.appendChild(img);
-        cntr.appendChild(div);
 
+        // Jumbotron for each character
         const div2 = document.createElement("div");
         div2.className = "jumbotron";
+        div.appendChild(div2);
+
+        // Name tag in jumbotron of each character
         const name = document.createElement("h2");
         name.appendChild(document.createTextNode(`${res.data.name}`));
         div2.appendChild(name);
-        div.appendChild(div2);
+
+        // Appending column of each character on the main container
+        cntr.appendChild(div);
 
         // Superheroes properties //
 
@@ -57,11 +53,9 @@ for( let i=1;i<700;i++)
             p1.appendChild(document.createTextNode("Data Unavailable"));
             div2.appendChild(pwr1);
             div2.appendChild(p1);   
-           // console.log("success");
         }
         else
         {
-
             const div3 = document.createElement("div");
             div3.className = "progress";
             div3.setAttribute("style","height: 20px;")
@@ -86,12 +80,8 @@ for( let i=1;i<700;i++)
 
             div3.appendChild(div4);
             div2.appendChild(pwr1);
-            div2.appendChild(div3);
-            
+            div2.appendChild(div3);  
         }
-
-        
-        
 
         // Power
 
@@ -105,8 +95,6 @@ for( let i=1;i<700;i++)
             p2.appendChild(document.createTextNode("Data Unavailable"));
             div2.appendChild(pwr2);
             div2.appendChild(p2);   
-           // console.log("success");
-
         }
         else
         {
@@ -154,12 +142,9 @@ for( let i=1;i<700;i++)
             p3.appendChild(document.createTextNode("Data Unavailable"));
             div2.appendChild(pwr3);
             div2.appendChild(p3);   
-           // console.log("success");
-
         }
         else
         {
-
             const div7 = document.createElement("div");
             div7.className = "progress";
             div7.setAttribute("style","height: 20px;")
@@ -200,8 +185,6 @@ for( let i=1;i<700;i++)
             p4.appendChild(document.createTextNode("Data Unavailable"));
             div2.appendChild(pwr4);
             div2.appendChild(p4);   
-           // console.log("success");
-
         }
         else
         {
@@ -247,7 +230,6 @@ for( let i=1;i<700;i++)
             p5.appendChild(document.createTextNode("Data Unavailable"));
             div2.appendChild(pwr5);
             div2.appendChild(p5);   
-           // console.log("success");
 
         }
         else
@@ -293,8 +275,6 @@ for( let i=1;i<700;i++)
             p6.appendChild(document.createTextNode("Data Unavailable"));
             div2.appendChild(pwr6);
             div2.appendChild(p6);   
-           // console.log("success");
-
         }
         else
         {
@@ -331,11 +311,3 @@ for( let i=1;i<700;i++)
     }
 }
 
-//console.log(cntr);
-    
-// const id = spr.map((sam) => {
-//     return sam.id;
-// });
-
-
-console.log(null<10);
