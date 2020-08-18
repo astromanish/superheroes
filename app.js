@@ -41,7 +41,7 @@ for( let i=1;i<50;i++)
         const name = document.createElement("h2");
         name.appendChild(document.createTextNode(`${res.data.name}`));
         div2.appendChild(name);
-        cntr.appendChild(div2);
+        div.appendChild(div2);
 
         // Superheroes properties //
 
