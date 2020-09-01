@@ -18,7 +18,7 @@ for( let i=1;i<700;i++)
 
         // Creating column for each character
         const div = document.createElement("div");
-        div.className = "col-lg-6 offset-lg-3 mb-3";
+        div.className = "ml-2";
 
         // Image container for each character
         const img = document.createElement("img");

@@ -22,9 +22,21 @@ img{
 }
 
 .cntr{
-    max-width: 800px;
+    max-width: 1100px;
     margin: 0 auto;
     width : 95%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.cntr img{
+    height: 400px;
+    width: 350px;
+}
+
+.jumbotron{
+    height: 500px;
+    width: 350px;
 }
 
 .properties{
@@ -33,4 +45,16 @@ img{
 
 .progress-bar{
     margin: 0;
+}
+
+@media (max-width:800px){
+    .cntr{
+        grid-template-columns: repeat(2,1fr) ;
+    }
+}
+
+@media (max-width:400px){
+    .cntr{
+        grid-template-columns: 1fr ;
+    }
 }
